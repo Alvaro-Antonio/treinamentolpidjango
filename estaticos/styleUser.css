@@ -1,0 +1,1095 @@
+* {margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border:none;
+	outline: none;
+	font-weight: 300;
+	box-sizing:border-box;
+	font-family: Arial;
+ }
+
+body{background-color: #948668;}
+a{text-decoration: none;}
+ul{list-style: none;}
+img {max-width: 100%;}
+
+/* CABEÇALHO */
+#cd{
+	display:none;
+}
+
+.cabecalho{
+	width: 100%;
+	float: left;
+	position: fixed;
+	padding: 0.5% 0.5%;
+	background:radial-gradient(#454545,black);
+	box-shadow: #444 1px 3px;
+ }
+.logo {
+	width: 100px;
+	height:60px;
+	float: left;
+	background:url(imagens/lpiicon.png) center center/100px no-repeat;
+}
+.btn-menu{
+	width: auto;height: auto;
+	float: right;
+	text-align: center;
+	color: white;
+	border-radius: 8px;
+	#box-shadow: 2px 4px #666;
+	background-color:#fd261a;
+	font-size: 22px;margin: 0;
+	margin-top: 10px;
+	margin-right: 8px;
+	padding: 0.9%;
+	cursor: pointer;
+}
+
+.btn-menu:hover{
+	color: black;
+	font-size: 23px;}
+@keyframes telamenu {
+    from {right: -200px;opacity: 0;}
+    to {left:27%;opacity:1;}
+}
+.menu{
+	display:none;
+	width: 70%;
+	height: 100%;
+	position:fixed ;
+	z-index: 100;
+	background-color: rgba(250,250,250,0.9);
+	top: 0;
+	left: 30%;
+	-webkit-animation-name: telamenu; /* Chrome, Safari, Opera */
+  	-webkit-animation-duration: 0.7s; /* Chrome, Safari, Opera */
+  	-webkit-animation-direction: inherit;
+  	animation-name: telamenu;
+  	animation-duration: 0.5s;}
+.close{font-size: 2em;color: #000;float: right;cursor: pointer;margin-right: 5%;}
+.close:hover{color: red;}
+.menu ul{width: 100%;float: left;text-align: center;z-index: 100;}
+.menu li{padding: 1.5%;}
+.menu li a {font-size: 2em;color: #000;padding: 1.5% 3%;}
+.menu li a:hover{color: blue;font-size: 1.5em;}
+
+/*########## #MOdal ################*/
+
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:-5px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+
+/* The modal's background */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Display the modal when targeted */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* The modal box */
+.modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* The modal's content */
+.modal-dialog .modal-content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Add animation */
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+.modal-content h2 {
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+.modal-content p{
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+/* The button used to close the modal */
+.closebtn {
+	text-decoration: none;
+  float: right;
+	margin-right: -20px;
+	margin-top: -15px;
+  width: 28px;
+	height: 28px;
+	font-size:1.5em;
+  font-weight: bold;
+  color: #000;
+	background-color: red;
+	border-radius: 28px;
+	padding: 0;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: red;
+	background-color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  padding: 2px 16px;
+}
+/*#########################################
+###############    idSimulado #############
+########################################### */
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:-5px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+
+/* The modal's background */
+.modalidSimulado {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Display the modal when targeted */
+.modalidSimulado:target {
+  display: table;
+  position: absolute;
+}
+
+/* The modal box */
+.modal-dialogidSimulado {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* The modal's content */
+.modal-dialogidSimulado .modal-contentidSimulado {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Add animation */
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+.modal-contentidSimulado h2 {
+	text-align: center;
+	font-size: 1.2em;
+	color: black;
+	margin-top: 5%;
+}
+.modal-contentidSimulado p{
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+/* The button used to close the modal */
+.closebtnidSimulado {
+	text-decoration: none;
+  float: right;
+	margin-right: -20px;
+	margin-top: -15px;
+  width: 28px;
+	height: 28px;
+	font-size:1.5em;
+  font-weight: bold;
+  color: #000;
+	background-color: red;
+	border-radius: 28px;
+	padding: 0;
+}
+
+.closebtnidSimulado:hover,
+.closebtnidSimulado:focus {
+  color: red;
+	background-color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#background{
+	margin: 5%;
+	background-color: white;
+}
+.loginsidSimulado{
+	float: none;
+	width: 100%;
+	margin-top: 10%;
+	background-color: white;
+}
+.loginsidSimulado input{
+	margin-left: 1%;
+	padding: 1%;
+	width: 90%;
+	border-style: none;
+}
+.loginsidSimulado input[type=submit]{
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+		margin-right: 3%;
+		width: 95%;
+}
+.loginsidSimulado input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bolder;
+	color:red;
+}
+.loginsidSimulado div{
+	background-color: #fff;
+	width: auto;
+	margin: 1%;
+	padding: 1%;
+	border:solid 0.8px;
+}
+/*############Fim do idSimulado ##########*/
+/*########### Fim MOdal ################*/
+#conteudo{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+#conteudo h1{
+	padding-top: 20%;
+	text-align: center;
+	font-size: 2em;
+}
+#conteudo p{
+	text-align: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.formCadastra input{
+	margin-left: 2%;
+	padding: 1%;
+	width: 90%;
+	border-style: none;
+}
+.formCadastra  input[type=submit]{
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+		margin-right: 3%;
+		width: 95%;
+}
+.formCadastra input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bolder;
+	color:red;
+}
+.formCadastra select option{
+	margin-left: 2%;
+	padding: 1%;
+	width: 100%;
+	border-style: none;
+}
+/*.formCadastra input[type=checkbox]{
+	margin-left: 0;
+	text-align: left;
+}*/
+#mineracao input{
+	background-color: none;
+	width: 5px;
+	margin: 0;
+}
+div#mineracao{
+	margin: 1%;
+	text-align: left;
+	font-size: 0.8em;
+	background-color: none;
+}
+#mineracao input[type = checkbox]{
+	text-decoration: none;
+	background-color: red;
+	margin: 0;
+}
+.formCadastra div{
+	background-color: #fff;
+	width: auto;
+	margin: 1%;
+	padding: 1%;
+	border:solid 0.8px;
+}
+#simulado {
+	float: left;
+	margin-top: 30%;
+	margin-left: 3%;
+	margin-right: 1%;
+}
+#feedback{
+	padding: 1%;
+	background-color: white;
+	border: solid 0.8px;
+	margin-left: -8px;
+	margin-right:-3px;
+}
+.logins{
+	float: left;
+	width: 100%;
+	margin-top: 10%;
+}
+.logins input{
+	margin-left: 2%;
+	padding: 1%;
+	width: auto;
+	border-style: none;
+}
+.logins input[type=submit]{
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+		margin-right: 3%;
+		width: 95%;
+}
+.logins input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bolder;
+	color:red;
+}
+.logins div{
+	background-color: #fff;
+	width: auto;
+	margin: 1%;
+	padding: 1%;
+	border:solid 0.8px;
+}
+#pergunta {
+	margin-top: 10%;
+}
+
+#simulado input[type=radio]{
+	text-align: left;
+	margin-left: 2%;
+	padding: 2%;
+	}
+#simulado input[type=submit]{
+		width: 95%;
+		padding: 1%;
+		margin: 2%;
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+}
+#simulado input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bold;
+	color:red;
+}
+#sugestoes{
+	margin: 1%;
+}
+#sugestoes div{
+	margin-top: 0.8%;
+	padding: 1%;
+	border: 0.8px solid ;
+ 	background-color: #fff;
+}
+
+#sugestoes input{
+	width: 90%;
+	margin: 0;
+	border-style: none;
+	margin-left: 5px;
+}
+#sugestoes div > input[type=submit]{
+	width: 100%;
+	background-color: #15D94B;
+}
+#sugestoes input[type=submit]{
+	margin: 0;
+	background-color: #15D94B;
+	color: white;
+	padding: 1%;
+	font-weight: bold;
+}
+#sugestoes input[type=submit]:hover{
+	background:linear-gradient(to right,#15D94B,green);
+	text-transform: uppercase;
+	color: black;
+}
+div#pergunta:hover{
+	border: blue 2px solid;
+	color: blue;
+}
+#certa:hover{
+	border: green 2px solid;
+	color: green;
+}
+#errada:hover{
+	border: red 2px solid;
+	color: red;
+}
+@media screen and (min-width:800px){
+	p{
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+		text-align: justify;
+	}
+	.logo {
+		width: 170px;
+		height: 100px;
+		float: left;
+		background:url(imagens/lpi.png) center center/170px no-repeat;
+	}
+	.btn-menu{display: none;}
+	.close {display: none;}
+	.menu{width:auto ;
+		height: 100px;line-height: 135px;
+		float: right;position:static ;
+		display: block !important;
+		background-color: rgba(0, 0, 0, 0);
+	}
+	.menu li{padding: 0;float: left;}
+	.menu li a{padding:15px;float: left;font-size: 1.2em;color: white;}
+	.menu li a:hover{border:none;color:rgb(227, 39, 39);text-decoration: underline white;}
+	.menu footer{ display: none; }
+	.logins {
+		z-index: -1;
+		background-color: #b2b7bb;
+		border: groove;
+		border-radius: 7px;
+		box-shadow: rgba(0, 0, 0, 0.48) 7px 10px;
+		position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		width: 600px;
+		float: left;
+	}
+	.logins input{
+	margin-left: 2%;
+	padding: 1%;
+	width: 90%;
+	border-style: none;
+	}
+	.logins input[type=submit]{
+			background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+			color: #fff;
+			width: 100%;
+			padding: 1.5%;
+			margin-left: 0;
+			margin-top: 1%;
+			margin-bottom: 0;
+	}
+	.logins input[type=submit]:hover{
+		background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		font-weight:bolder;
+		color:red;
+	}
+	.logins div{
+		background-color: #fff;
+		width: auto;
+		margin: 1%;
+		padding: 1%;
+		border:solid 0.8px;
+	}
+
+}* {margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border:none;
+	outline: none;
+	font-weight: 300;
+	box-sizing:border-box;
+	font-family: Arial;
+ }
+
+body{background-color: #948668;}
+a{text-decoration: none;}
+ul{list-style: none;}
+img {max-width: 100%;}
+
+/* CABEÇALHO */
+#cd{
+	display:none;
+}
+
+.cabecalho{
+	width: 100%;
+	float: left;
+	position: fixed;
+	padding: 0.5% 0.5%;
+	background:radial-gradient(#454545,black);
+	box-shadow: #444 1px 3px;
+ }
+.logo {
+	width: 100px;
+	height:60px;
+	float: left;
+	background:url(imagens/lpiicon.png) center center/100px no-repeat;
+}
+.btn-menu{
+	width: auto;height: auto;
+	float: right;
+	text-align: center;
+	color: white;
+	border-radius: 8px;
+	#box-shadow: 2px 4px #666;
+	background-color:#fd261a;
+	font-size: 22px;margin: 0;
+	margin-top: 10px;
+	margin-right: 8px;
+	padding: 0.9%;
+	cursor: pointer;
+}
+
+.btn-menu:hover{
+	color: black;
+	font-size: 23px;}
+@keyframes telamenu {
+    from {right: -200px;opacity: 0;}
+    to {left:27%;opacity:1;}
+}
+.menu{
+	display:none;
+	width: 70%;
+	height: 100%;
+	position:fixed ;
+	z-index: 100;
+	background-color: rgba(250,250,250,0.9);
+	top: 0;
+	left: 30%;
+	-webkit-animation-name: telamenu; /* Chrome, Safari, Opera */
+  	-webkit-animation-duration: 0.7s; /* Chrome, Safari, Opera */
+  	-webkit-animation-direction: inherit;
+  	animation-name: telamenu;
+  	animation-duration: 0.5s;}
+.close{font-size: 2em;color: #000;float: right;cursor: pointer;margin-right: 5%;}
+.close:hover{color: red;}
+.menu ul{width: 100%;float: left;text-align: center;z-index: 100;}
+.menu li{padding: 1.5%;}
+.menu li a {font-size: 2em;color: #000;padding: 1.5% 3%;}
+.menu li a:hover{color: blue;font-size: 1.5em;}
+
+/*########## #MOdal ################*/
+
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:-5px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+
+/* The modal's background */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Display the modal when targeted */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* The modal box */
+.modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* The modal's content */
+.modal-dialog .modal-content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Add animation */
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+.modal-content h2 {
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+.modal-content p{
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+/* The button used to close the modal */
+.closebtn {
+	text-decoration: none;
+  float: right;
+	margin-right: -20px;
+	margin-top: -15px;
+  width: 28px;
+	height: 28px;
+	font-size:1.5em;
+  font-weight: bold;
+  color: #000;
+	background-color: red;
+	border-radius: 28px;
+	padding: 0;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: red;
+	background-color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  padding: 2px 16px;
+}
+/*#########################################
+###############    idSimulado #############
+########################################### */
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:-5px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+
+/* The modal's background */
+.modalidSimulado {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Display the modal when targeted */
+.modalidSimulado:target {
+  display: table;
+  position: absolute;
+}
+
+/* The modal box */
+.modal-dialogidSimulado {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* The modal's content */
+.modal-dialogidSimulado .modal-contentidSimulado {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Add animation */
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+.modal-contentidSimulado h2 {
+	text-align: center;
+	font-size: 1.2em;
+	color: black;
+	margin-top: 5%;
+}
+.modal-contentidSimulado p{
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+/* The button used to close the modal */
+.closebtnidSimulado {
+	text-decoration: none;
+  float: right;
+	margin-right: -20px;
+	margin-top: -15px;
+  width: 28px;
+	height: 28px;
+	font-size:1.5em;
+  font-weight: bold;
+  color: #000;
+	background-color: red;
+	border-radius: 28px;
+	padding: 0;
+}
+
+.closebtnidSimulado:hover,
+.closebtnidSimulado:focus {
+  color: red;
+	background-color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#background{
+	margin: 5%;
+	background-color: white;
+}
+.loginsidSimulado{
+	float: none;
+	width: 100%;
+	margin-top: 10%;
+	background-color: white;
+}
+.loginsidSimulado input{
+	margin-left: 1%;
+	padding: 1%;
+	width: 90%;
+	border-style: none;
+}
+.loginsidSimulado input[type=submit]{
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+		margin-right: 3%;
+		width: 95%;
+}
+.loginsidSimulado input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bolder;
+	color:red;
+}
+.loginsidSimulado div{
+	background-color: #fff;
+	width: auto;
+	margin: 1%;
+	padding: 1%;
+	border:solid 0.8px;
+}
+/*############Fim do idSimulado ##########*/
+/*########### Fim MOdal ################*/
+#conteudo{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+#conteudo h1{
+	padding-top: 20%;
+	text-align: center;
+	font-size: 2em;
+}
+#conteudo p{
+	text-align: justify;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.formCadastra input{
+	margin-left: 2%;
+	padding: 1%;
+	width: 90%;
+	border-style: none;
+}
+.formCadastra  input[type=submit]{
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+		margin-right: 3%;
+		width: 95%;
+}
+.formCadastra input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bolder;
+	color:red;
+}
+.formCadastra select option{
+	margin-left: 2%;
+	padding: 1%;
+	width: 100%;
+	border-style: none;
+}
+/*.formCadastra input[type=checkbox]{
+	margin-left: 0;
+	text-align: left;
+}*/
+#mineracao input{
+	background-color: none;
+	width: 5px;
+	margin: 0;
+}
+div#mineracao{
+	margin: 1%;
+	text-align: left;
+	font-size: 0.8em;
+	background-color: none;
+}
+#mineracao input[type = checkbox]{
+	text-decoration: none;
+	background-color: red;
+	margin: 0;
+}
+.formCadastra div{
+	background-color: #fff;
+	width: auto;
+	margin: 1%;
+	padding: 1%;
+	border:solid 0.8px;
+}
+#simulado {
+	float: left;
+	margin-top: 30%;
+	margin-left: 3%;
+	margin-right: 1%;
+}
+#feedback{
+	padding: 1%;
+	background-color: white;
+	border: solid 0.8px;
+	margin-left: -8px;
+	margin-right:-3px;
+}
+.logins{
+	float: left;
+	width: 100%;
+	margin-top: 10%;
+}
+.logins input{
+	margin-left: 2%;
+	padding: 1%;
+	width: auto;
+	border-style: none;
+}
+.logins input[type=submit]{
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+		margin-right: 3%;
+		width: 95%;
+}
+.logins input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bolder;
+	color:red;
+}
+.logins div{
+	background-color: #fff;
+	width: auto;
+	margin: 1%;
+	padding: 1%;
+	border:solid 0.8px;
+}
+#pergunta {
+	margin-top: 10%;
+}
+
+#simulado input[type=radio]{
+	text-align: left;
+	margin-left: 2%;
+	padding: 2%;
+	}
+#simulado input[type=submit]{
+		width: 95%;
+		padding: 1%;
+		margin: 2%;
+		background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		color: #fff;
+}
+#simulado input[type=submit]:hover{
+	background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+	font-weight:bold;
+	color:red;
+}
+#sugestoes{
+	margin: 1%;
+}
+#sugestoes div{
+	margin-top: 0.8%;
+	padding: 1%;
+	border: 0.8px solid ;
+ 	background-color: #fff;
+}
+
+#sugestoes input{
+	width: 90%;
+	margin: 0;
+	border-style: none;
+	margin-left: 5px;
+}
+#sugestoes div > input[type=submit]{
+	width: 100%;
+	background-color: #15D94B;
+}
+#sugestoes input[type=submit]{
+	margin: 0;
+	background-color: #15D94B;
+	color: white;
+	padding: 1%;
+	font-weight: bold;
+}
+#sugestoes input[type=submit]:hover{
+	background:linear-gradient(to right,#15D94B,green);
+	text-transform: uppercase;
+	color: black;
+}
+div#pergunta:hover{
+	border: blue 2px solid;
+	color: blue;
+}
+#certa:hover{
+	border: green 2px solid;
+	color: green;
+}
+#errada:hover{
+	border: red 2px solid;
+	color: red;
+}
+
+
+
+/* Configuração tela minima 800px*/
+
+
+
+
+
+@media screen and (min-width:800px){
+	p{
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+		text-align: justify;
+	}
+	.logo {
+		width: 170px;
+		height: 100px;
+		float: left;
+		background:url(imagens/lpi.png) center center/170px no-repeat;
+	}
+	.btn-menu{display: none;}
+	.close {display: none;}
+	.menu{width:auto ;
+		height: 100px;line-height: 135px;
+		float: right;position:static ;
+		display: block !important;
+		background-color: rgba(0, 0, 0, 0);
+	}
+	.menu li{padding: 0;float: left;}
+	.menu li a{padding:15px;float: left;font-size: 1.2em;color: white;}
+	.menu li a:hover{border:none;color:rgb(227, 39, 39);text-decoration: underline white;}
+	.menu footer{ display: none; }
+	.logins {
+		z-index: -1;
+		background-color: #b2b7bb;
+		border: groove;
+		border-radius: 7px;
+		box-shadow: rgba(0, 0, 0, 0.48) 7px 10px;
+		position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		width: 600px;
+		float: left;
+	}
+	.logins input{
+	margin-left: 2%;
+	padding: 1%;
+	width: 90%;
+	border-style: none;
+	}
+	.logins input[type=submit]{
+			background:radial-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+			color: #fff;
+			width: 100%;
+			padding: 1.5%;
+			margin-left: 0;
+			margin-top: 1%;
+			margin-bottom: 0;
+	}
+	.logins input[type=submit]:hover{
+		background:linear-gradient(rgb(94, 54, 54),rgb(15, 7, 7));
+		font-weight:bolder;
+		color:red;
+	}
+	.logins div{
+		background-color: #fff;
+		width: auto;
+		margin: 1%;
+		padding: 1%;
+		border:solid 0.8px;
+	}
+
+	#sugestoes{
+		position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		width: 800px;
+	}
+}

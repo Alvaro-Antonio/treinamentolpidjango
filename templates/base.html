@@ -1,0 +1,202 @@
+{% if not user.is_authenticated %}
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="index, follow"/>
+    <title>Treinamento Lpi </title>
+    <link rel="shortcut icon" href="{% static 'imagens/lpiicon.png' %}" type="image/x-icon"/>
+    <meta name="keywords" content="Treinamento LPI,LPI,LPIC">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel=stylesheet href="{% static 'styleUser.css' %}" type=text/css media=screen>
+    <link rel=stylesheet href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
+    <script type=text/javascript src="{% static 'jquery/mod1/js/jquery.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $("#id02 a").click(function( e ){
+            e.preventDefault();
+            var href = $( this ).attr('href');
+            $("#conteudo").load(href);
+          });
+        });
+    </script>
+
+</head>
+
+<body>
+<header class=cabecalho>
+    <a href="{% url 'home' %}"><p class=logo>&nbsp; </p></a>
+    <button class=btn-menu><i class="fa fa-server" aria-hidden="true"></i></button>
+    <nav class=menu>
+        <a class=close><i class="fa fa-times-circle" aria-hidden="true"></i>
+        </a>
+        <ul>
+            <li><a href="index.php">Início <i class="fa fa-home" aria-hidden="true"></i></li>
+            <li><a href="#idSimulado"> Simulado <i class="fa fa-edit" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="{% url 'login'%}">Login <i class="fa fa-user-o" aria-hidden="true"></i></li>
+            <li><a href="#id01">Sobre<i class="fa fa-plus" aria-hidden="true"></i></a></li>
+            <br>
+            <footer><img src="{% static 'imagens/lpiicon.png' %}" alt="Logo Treinamento LPI" style="width:100%">
+            </footer>
+        </ul>
+
+    </nav>
+
+</header>
+<div id="id01" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <header class="container">
+                <a href="#" class="closebtn">&nbsp;×</a>
+                <img src="{% static 'imagens/teste.png' %}" alt="Logo Treinamento LPI"
+                     style="width:180px;height:auto;float:left;">
+                <h2>Treinamento LPI</h2>
+            </header>
+            <div class="container">
+                <p>Versão 1.0</p>
+                <p>Desenvolvido para fins públicos</p>
+            </div>
+            <footer class="container">
+
+                <label><br>Site Desenvolvido por Phoenix Tecnologia ©</label><br>
+                <label>alvaroantoniosbu@gmail.com</label><br><br>
+        </div>
+    </div>
+</div>
+
+<div id="idSimulado" class="modalidSimulado">
+    <div class="modal-dialogidSimulado">
+        <div class="modal-contentidSimulado">
+            <header class="containeridSimulado">
+                <a href="#" class="closebtnidSimulado">&nbsp;×</a>
+                <div id="background">
+                    <h2>Realize seu Login</h2>
+                    <div class="loginsidSimulado">
+                        <form method="post" action="autenticacao.php">
+                            <div><i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input type="email" autofocus id="email" name="email" required
+                                       placeholder="Digite seu E-mail">
+                            </div>
+
+                            <div><i class="fa fa-key" aria-hidden="true"></i>
+                                <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
+                            </div>
+                            <a href="cadastro.php"><span>Ainda não possuo Cadastro</span></a>
+                            <input type="submit" name="Entrar" value="Entrar">
+                        </form>
+                    </div>
+                </div>
+            </header>
+
+        </div>
+    </div>
+</div>
+
+<script type=text/javascript src="{% static 'jquery/mod1/js/jquery.js' %}"></script>
+<script>
+            $(".btn-menu").click(function () {
+              $(".menu").show();
+            });
+            $("a").click(function() {
+              $(".menu" ).hide();
+            });
+            $(".close" ).click(function () {
+              $(".menu" ).hide();
+            });
+
+
+</script>
+
+{% else %}
+
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="index, follow"/>
+    <title>Treinamento Lpi </title>
+    <link rel="shortcut icon" href="{% static 'imagens/lpiicon.png' %}" type="image/x-icon"/>
+    <meta name="keywords" content="Treinamento LPI,LPI,LPIC">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel=stylesheet href="{% static 'styleUser.css' %}" type=text/css media=screen>
+    <link rel=stylesheet href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
+    <script type=text/javascript src="{% static 'jquery/mod1/js/jquery.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $("#id02 a").click(function( e ){
+            e.preventDefault();
+            var href = $( this ).attr('href');
+            $("#conteudo").load(href);
+          });
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+<header class=cabecalho>
+    <a href="{% url 'home' %}"><p class=logo>&nbsp; </p></a>
+    <button class=btn-menu><i class="fa fa-server" aria-hidden="true"></i></button>
+    <nav class=menu>
+        <a class=close><i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+        <ul>
+            <li><a href="user.php">Inicio <i class="fa fa-home" aria-hidden="true"></i></li>
+            <li id=id02><a href=simulado.php>Simulado <i class="fa fa-edit" aria-hidden="true"></i>
+            </a></li>
+            <li id="id02"><a href="sugestoes.php">Sugestões <i class="fa fa-commenting-o" aria-hidden="true"></i></li>
+            <li><a href=sobre.php>Sobre <i class="fa fa-plus" aria-hidden="true"></i></a></li>
+            <li><a href="{% url 'logout' %}">Sair <i class="fa fa-power-off" aria-hidden="true"></i></a></li>
+            <br>
+            <footer><img src="{% static 'imagens/teste.png' %} " width=100%></footer>
+        </ul>
+
+    </nav>
+
+</header>
+<div id="id01" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <header class="container">
+                <a href="#" class="closebtn">&nbsp;×</a>
+                <img src="lpi.png" alt="Logo Treinamento LPI" style="width:180px;height:auto;float:left;">
+                <h2>Treinamento LPI</h2>
+            </header>
+            <div class="container">
+                <p>Versão 1.0</p>
+                <p>Desenvolvido para fins públicos</p>
+            </div>
+
+            <footer class="container">
+
+                <label><br>Site Desenvolvido por Phoenix Tecnologia ©</label><br>
+                <label>alvaroantoniosbu@gmail.com</label><br><br>
+        </div>
+    </div>
+</div>
+<pre>https://github.com/Alvaro-Antonio/TreinamentoLpi.git</pre>
+<script type="text/javascript" src="{% static 'jquery/mod1/js/jquery.js' %}">
+            $(".btn-menu").click(function () {
+              $(".menu").show();
+            });
+            $("a").click(function() {
+              $(".menu" ).hide();
+            });
+            $(".close" ).click(function () {
+              $(".menu" ).hide();
+            });
+
+</script>
+
+{% endif %}
+{% block conteudo %}
+{% endblock %}
+
+</body>
+
+</html>
