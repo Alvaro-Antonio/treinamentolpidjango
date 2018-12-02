@@ -32,7 +32,7 @@
         <a class=close><i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
         <ul>
-            <li><a href="index.php">Início <i class="fa fa-home" aria-hidden="true"></i></li>
+            <li><a href="{% url 'home' %}">Início <i class="fa fa-home" aria-hidden="true"></i></li>
             <li><a href="#idSimulado"> Simulado <i class="fa fa-edit" aria-hidden="true"></i>
             </a></li>
             <li><a href="{% url 'login'%}">Login <i class="fa fa-user-o" aria-hidden="true"></i></li>
@@ -146,14 +146,14 @@
         <a class=close><i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
         <ul>
-            <li><a href="user.php">Inicio <i class="fa fa-home" aria-hidden="true"></i></li>
+            <li><a href="{% url 'home' %}">Inicio <i class="fa fa-home" aria-hidden="true"></i></li>
             <li id=id02><a href=simulado.php>Simulado <i class="fa fa-edit" aria-hidden="true"></i>
             </a></li>
-            <li id="id02"><a href="sugestoes.php">Sugestões <i class="fa fa-commenting-o" aria-hidden="true"></i></li>
+            <li id="id02"><a href="{% url 'sugestaoS' %}">Sugestões <i class="fa fa-commenting-o" aria-hidden="true"></i></li>
             <li><a href=sobre.php>Sobre <i class="fa fa-plus" aria-hidden="true"></i></a></li>
             <li><a href="{% url 'logout' %}">Sair <i class="fa fa-power-off" aria-hidden="true"></i></a></li>
             <br>
-            <footer><img src="{% static 'imagens/teste.png' %} " width=100%></footer>
+            <footer><img src="{% static 'imagens/lpiicon.png' %} " width=100%></footer>
         </ul>
 
     </nav>
@@ -164,7 +164,7 @@
         <div class="modal-content">
             <header class="container">
                 <a href="#" class="closebtn">&nbsp;×</a>
-                <img src="lpi.png" alt="Logo Treinamento LPI" style="width:180px;height:auto;float:left;">
+                <img src="{% static 'imagens/lpi.png' %}" alt="Logo Treinamento LPI" style="width:180px;height:auto;float:left;">
                 <h2>Treinamento LPI</h2>
             </header>
             <div class="container">
@@ -180,7 +180,8 @@
     </div>
 </div>
 <pre>https://github.com/Alvaro-Antonio/TreinamentoLpi.git</pre>
-<script type="text/javascript" src="{% static 'jquery/mod1/js/jquery.js' %}">
+<script type="text/javascript" src="{% static 'jquery/mod1/js/jquery.js' %}"> </script>
+<script>
             $(".btn-menu").click(function () {
               $(".menu").show();
             });

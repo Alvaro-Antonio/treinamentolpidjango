@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from sugestaoSimulado.forms import sugestaoSimulado
+
+admin.site.register(sugestaoSimulado)

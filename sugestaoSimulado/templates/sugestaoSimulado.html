@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block conteudo %}
+<div id=conteudo>
+    <div id="sugestoes">
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ formSS|bootstrap }}
+            <input type="submit" name="Enviar" value="Enviar">
+        </form>
+    </div>
+</div>
+{% endblock %}
+    
