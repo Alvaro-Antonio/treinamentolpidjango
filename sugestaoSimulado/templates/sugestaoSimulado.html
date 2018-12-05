@@ -2,9 +2,9 @@
 {% block conteudo %}
 <div id="conteudo">
     <h1>Tela de Sugestões</h1>
-	<article >Este espaço está destinado para sugestões para o desenvolvimento do site, contribua com o seu crescimento. </article>
-    <div id="sugestoes">
 
+    <div id="sugestoes">
+        <article >Este espaço está destinado para sugestões para o desenvolvimento do site, contribua com o seu crescimento. </article>
         <form method="POST">
             {% csrf_token %}
             <div id="pergunta" ><i class="fa fa-question" aria-hidden="true"></i>

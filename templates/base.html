@@ -80,7 +80,12 @@
                     <div class="loginsidSimulado">
                         <form method="post">
                              {% csrf_token %}
-                             {{ form }}
+                            <div ><i class="fa fa-envelope" aria-hidden="true"></i>
+                                {{ form.username }}
+                            </div>
+                            <div><i class="fa fa-key" aria-hidden="true"></i>
+                                {{ form.password }}
+                            </div>
                             <a href="cadastro.php"><p>Ainda não possuo Cadastro</p></a>
                             <input type="submit" name="Entrar" value="Entrar">
                         </form>
