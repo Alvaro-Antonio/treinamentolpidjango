@@ -1,4 +1,4 @@
-{% if not user.is_authenticated %}
+{% load bootstrap %}
 {% load static %}
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -20,9 +20,13 @@
             $("#conteudo").load(href);
           });
         });
+
+
     </script>
 
 </head>
+
+{% if not user.is_authenticated %}
 
 <body>
 <header class=cabecalho>
@@ -74,16 +78,10 @@
                 <div id="background">
                     <h2>Realize seu Login</h2>
                     <div class="loginsidSimulado">
-                        <form method="post" action="autenticacao.php">
-                            <div><i class="fa fa-envelope" aria-hidden="true"></i>
-                                <input type="email" autofocus id="email" name="email" required
-                                       placeholder="Digite seu E-mail">
-                            </div>
-
-                            <div><i class="fa fa-key" aria-hidden="true"></i>
-                                <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
-                            </div>
-                            <a href="cadastro.php"><span>Ainda não possuo Cadastro</span></a>
+                        <form method="post">
+                             {% csrf_token %}
+                             {{ form }}
+                            <a href="cadastro.php"><p>Ainda não possuo Cadastro</p></a>
                             <input type="submit" name="Entrar" value="Entrar">
                         </form>
                     </div>
@@ -112,31 +110,7 @@
 {% else %}
 
 {% load static %}
-<!DOCTYPE HTML>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="robots" content="index, follow"/>
-    <title>Treinamento Lpi </title>
-    <link rel="shortcut icon" href="{% static 'imagens/lpiicon.png' %}" type="image/x-icon"/>
-    <meta name="keywords" content="Treinamento LPI,LPI,LPIC">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel=stylesheet href="{% static 'styleUser.css' %}" type=text/css media=screen>
-    <link rel=stylesheet href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
-    <script type=text/javascript src="{% static 'jquery/mod1/js/jquery.js' %}"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $("#id02 a").click(function( e ){
-            e.preventDefault();
-            var href = $( this ).attr('href');
-            $("#conteudo").load(href);
-          });
-        });
 
-
-    </script>
-
-</head>
 
 <body>
 <header class=cabecalho>
@@ -149,7 +123,7 @@
             <li><a href="{% url 'home' %}">Inicio <i class="fa fa-home" aria-hidden="true"></i></li>
             <li id=id02><a href=simulado.php>Simulado <i class="fa fa-edit" aria-hidden="true"></i>
             </a></li>
-            <li id="id02"><a href="{% url 'sugestaoS' %}">Sugestões <i class="fa fa-commenting-o" aria-hidden="true"></i></li>
+            <li ><a href="{% url 'sugestaoS' %}">Sugestões <i class="fa fa-commenting-o" aria-hidden="true"></i></li>
             <li><a href=sobre.php>Sobre <i class="fa fa-plus" aria-hidden="true"></i></a></li>
             <li><a href="{% url 'logout' %}">Sair <i class="fa fa-power-off" aria-hidden="true"></i></a></li>
             <br>

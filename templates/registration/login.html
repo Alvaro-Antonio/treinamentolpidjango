@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 {% load bootstrap %}
+
 {% block conteudo %}
 <div id="conteudo">
-
-
+    <br><br><br>
     <div class="logins">
         <form method="post">
             {% csrf_token %}
-            {{ form|bootstrap }}
+            <div>Usuário <i class="fa fa-envelope" aria-hidden="true"></i>
+            {{ form.username}}
+            </div>
+            <div>Senha <i class="fa fa-key" aria-hidden="true"></i>
+             {{ form.password}}
+            </div>
             <input type="submit" name="Entrar" value="Entrar">
         </form>
     </div>

@@ -38,7 +38,7 @@ img {max-width: 100%;}
 	text-align: center;
 	color: white;
 	border-radius: 8px;
-	#box-shadow: 2px 4px #666;
+	box-shadow: 2px 4px #666;
 	background-color:#fd261a;
 	font-size: 22px;margin: 0;
 	margin-top: 10px;
@@ -212,7 +212,7 @@ img {max-width: 100%;}
 /* The modal's content */
 .modal-dialogidSimulado .modal-contentidSimulado {
   margin: auto;
-  background-color: #fff;
+  background-color:green;
   position: relative;
   padding: 0;
   outline: 0;
@@ -264,13 +264,13 @@ img {max-width: 100%;}
 }
 #background{
 	margin: 5%;
-	background-color: white;
+	background-color: red;
 }
 .loginsidSimulado{
 	float: none;
 	width: 100%;
 	margin-top: 10%;
-	background-color: white;
+	background-color: red;
 }
 .loginsidSimulado input{
 	margin-left: 1%;
@@ -290,7 +290,7 @@ img {max-width: 100%;}
 	color:red;
 }
 .loginsidSimulado div{
-	background-color: #fff;
+	background-color:red;
 	width: auto;
 	margin: 1%;
 	padding: 1%;
@@ -577,7 +577,7 @@ img {max-width: 100%;}
 	text-align: center;
 	color: white;
 	border-radius: 8px;
-	#box-shadow: 2px 4px #666;
+	box-shadow: 2px 4px rgb(68, 11, 11);
 	background-color:#fd261a;
 	font-size: 22px;margin: 0;
 	margin-top: 10px;
@@ -946,7 +946,7 @@ div#mineracao{
 	border:solid 0.8px;
 }
 #pergunta {
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 #simulado input[type=radio]{
@@ -982,12 +982,12 @@ div#mineracao{
 	border-style: none;
 	margin-left: 5px;
 }
-#sugestoes div > input[type=submit]{
+#sugestoes input[type=submit]{
 	width: 100%;
 	background-color: #15D94B;
 }
 #sugestoes input[type=submit]{
-	margin: 0;
+	margin-top: 2px;
 	background-color: #15D94B;
 	color: white;
 	padding: 1%;
@@ -998,15 +998,15 @@ div#mineracao{
 	text-transform: uppercase;
 	color: black;
 }
-div#pergunta:hover{
+#pergunta:focus{
 	border: blue 2px solid;
 	color: blue;
 }
-#certa:hover{
-	border: green 2px solid;
+#certa:focus{
+	border:blue 2px solid;
 	color: green;
 }
-#errada:hover{
+#errada:focus{
 	border: red 2px solid;
 	color: red;
 }
@@ -1060,7 +1060,7 @@ div#pergunta:hover{
 	.logins input{
 	margin-left: 2%;
 	padding: 1%;
-	width: 90%;
+	width: auto;
 	border-style: none;
 	}
 	.logins input[type=submit]{
@@ -1084,12 +1084,15 @@ div#pergunta:hover{
 		padding: 1%;
 		border:solid 0.8px;
 	}
-
+	#conteudo{
+		margin-top: 10%;
+	}
 	#sugestoes{
-		position: absolute;
+	float:unset;
+	position: relative;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-		width: 800px;
+	width: 800px;
 	}
 }

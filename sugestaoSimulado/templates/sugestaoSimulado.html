@@ -1,13 +1,30 @@
 {% extends 'base.html' %}
-{% load bootstrap %}
-
 {% block conteudo %}
-<div id=conteudo>
+<div id="conteudo">
+    <h1>Tela de Sugestões</h1>
+	<article >Este espaço está destinado para sugestões para o desenvolvimento do site, contribua com o seu crescimento. </article>
     <div id="sugestoes">
 
         <form method="POST">
             {% csrf_token %}
-            {{ formSS|bootstrap }}
+            <div id="pergunta" ><i class="fa fa-question" aria-hidden="true"></i>
+            {{ formSS.pergunta }}
+            </div>
+            <div id="certa" ><i class="fa fa-check" aria-hidden="true"></i>
+                {{ formSS.respostaCerta }}
+            </div>
+            <div id="errada" ><i class="fa fa-remove" aria-hidden="true"></i>
+                {{ formSS.respostaErrada1 }}
+            </div>
+            <div id="errada" ><i class="fa fa-remove" aria-hidden="true"></i>
+                {{ formSS.respostaErrada2 }}
+            </div>
+            <div id="errada" ><i class="fa fa-remove" aria-hidden="true"></i>
+                {{ formSS.respostaErrada3 }}
+            </div>
+            <div id="errada" ><i class="fa fa-remove" aria-hidden="true"></i>
+                {{ formSS.respostaErrada4 }}
+            </div>
             <input type="submit" name="Enviar" value="Enviar">
         </form>
     </div>
