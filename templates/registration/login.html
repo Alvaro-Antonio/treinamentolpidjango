@@ -8,6 +8,7 @@
         <form method="post">
              <h1>Painel de Acesso </h1>
             {% csrf_token %}
+             {{ form.non_field_errors }}
             <div>Usuário <i class="fa fa-envelope" aria-hidden="true"></i>
             {{ form.username}}
             </div>

@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.urls import path, include
 from sugestaoSimulado import urls as urls_sugesSimu
 from sugestaoSimulado.views import sugestaoSimulados
+from contas import urls as urls_contas
 
 
 urlpatterns = [
@@ -27,6 +28,7 @@ urlpatterns = [
     path('sugestaoSimulado/', sugestaoSimulados, name="sugestaoS"),
     path('login/', auth_views.LoginView.as_view(), name="login"),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path ('cadastro/', include(urls_contas)),
     path('admin/', admin.site.urls),
     path('hello', hello),
 

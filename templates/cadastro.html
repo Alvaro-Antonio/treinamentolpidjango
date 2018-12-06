@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block conteudo %}
+<div id="conteudo">
+<h2>Aréa de Cadastro no Sistema</h2>
+<form method="post" class="formCadastra">
+    {% csrf_token %}
+    <br><br><br>
+        {{ form.non_field_errors }}
+        <div class="cadastro"><i class="fa fa-user" aria-hidden="true"></i>
+        {% render_field formCadastro.username placeholder="Nome de Usuário" %}
+        </div>
+         <div><i class="fa fa-key" aria-hidden="true"></i>
+             {% render_field formCadastro.password1 placeholder="Digite sua Senha" %}
+         </div>
+         <div><i class="fa fa-key" aria-hidden="true"></i>
+             {% render_field formCadastro.password2 placeholder="Confirme a senha" %}
+         </div>
+        <div ><i class="fa fa-envelope" aria-hidden="true"></i>
+            {% render_field formCadastro.email placeholder="E-mail aqui" %}
+        </div>
+
+    <input type="submit" name="Salvar" value="Salvar">
+</form>
+</div>
+
+{% endblock %}
